@@ -94,19 +94,19 @@ a {
 
 @media (max-width: 1024px) {
   .container {
-    padding: 0 20px;
+    padding: 0 22px;
   }
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 18px;
+    padding: 0 20px;
   }
 }
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 15px;
+    padding: 0 16px;
   }
 }
 
@@ -175,13 +175,13 @@ a {
 
 @media (max-width: 768px) {
   .section-padding {
-    padding: 60px 0;
+    padding: 65px 0;
   }
 }
 
 @media (max-width: 480px) {
   .section-padding {
-    padding: 45px 0;
+    padding: 50px 0;
   }
 }
 
@@ -242,10 +242,19 @@ a {
   display: inline-block;
 }
 
+@media (max-width: 768px) {
+  .section-badge {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+}
+
 @media (max-width: 480px) {
   .section-badge {
     font-size: 0.7rem;
     letter-spacing: 1.5px;
+    margin-bottom: 10px;
   }
 }
 
@@ -265,13 +274,16 @@ a {
 
 @media (max-width: 768px) {
   .section-title {
-    font-size: 1.9rem;
+    font-size: 1.95rem;
+    margin-bottom: 18px;
   }
 }
 
 @media (max-width: 480px) {
   .section-title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    line-height: 1.35;
   }
 }
 
@@ -283,6 +295,13 @@ a {
   max-width: 600px;
   margin: 0 auto;
   color: var(--color-text-muted-dark);
+  line-height: 1.7;
+}
+
+@media (max-width: 480px) {
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
 }
 
 /* --- BUTTONS --- */
@@ -301,7 +320,8 @@ a {
   transition: var(--transition-smooth);
   border: 2px solid transparent;
   min-height: 44px;
-  white-space: nowrap;
+  white-space: normal;
+  line-height: 1.4;
 }
 
 @media (max-width: 768px) {
@@ -313,9 +333,10 @@ a {
 
 @media (max-width: 480px) {
   .btn {
-    padding: 12px 20px;
-    font-size: 0.75rem;
-    letter-spacing: 1px;
+    padding: 14px 20px;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    min-height: 48px;
   }
 }
 
@@ -617,6 +638,13 @@ a {
   padding-top: 85px;
 }
 
+@media (max-width: 1024px) {
+  .hero {
+    min-height: 550px;
+    padding-top: 80px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
     min-height: 500px;
@@ -627,7 +655,7 @@ a {
 
 @media (max-width: 480px) {
   .hero {
-    min-height: 450px;
+    min-height: 480px;
     padding-top: 60px;
     justify-content: center;
   }
@@ -696,15 +724,17 @@ a {
   .hero-content {
     max-width: 90%;
     padding: 30px;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
   .hero-content {
-    max-width: 100%;
-    padding: 20px 15px;
-    align-items: flex-start;
+    max-width: 95%;
+    padding: 30px 15px;
+    align-items: center;
+    text-align: center;
   }
 }
 
@@ -720,16 +750,27 @@ a {
   white-space: nowrap;
 }
 
+@media (max-width: 1024px) {
+  .hero .badge {
+    font-size: 0.8rem;
+    letter-spacing: 2.5px;
+    margin-bottom: 18px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero .badge {
     font-size: 0.75rem;
     letter-spacing: 2px;
+    margin-bottom: 16px;
   }
 }
 
 @media (max-width: 480px) {
   .hero .badge {
     font-size: 0.65rem;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
   }
 }
 
@@ -743,6 +784,8 @@ a {
   word-wrap: break-word;
   word-break: break-word;
   max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 1024px) {
@@ -761,9 +804,10 @@ a {
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-bottom: 15px;
     max-width: 100%;
+    line-height: 1.3;
   }
 }
 
@@ -775,6 +819,8 @@ a {
   line-height: 1.7;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 768px) {
@@ -787,9 +833,9 @@ a {
 
 @media (max-width: 480px) {
   .hero-description {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    margin-bottom: 25px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
     max-width: 100%;
   }
 }
@@ -799,6 +845,7 @@ a {
   gap: 20px;
   flex-wrap: wrap;
   width: 100%;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
@@ -806,6 +853,7 @@ a {
     flex-direction: column;
     gap: 12px;
     width: 100%;
+    align-items: stretch;
   }
 
   .hero-buttons .btn {
@@ -815,12 +863,17 @@ a {
 
 @media (max-width: 480px) {
   .hero-buttons {
-    gap: 10px;
+    gap: 12px;
     width: 100%;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .hero-buttons .btn {
     width: 100%;
+    padding: 14px 20px;
+    font-size: 0.8rem;
+    min-height: 48px;
   }
 }
 
@@ -908,17 +961,26 @@ a {
   line-height: 1.8;
 }
 
+@media (max-width: 1024px) {
+  .about-text-column p {
+    font-size: 1rem;
+    margin-bottom: 18px;
+  }
+}
+
 @media (max-width: 768px) {
   .about-text-column p {
     font-size: 0.95rem;
     margin-bottom: 18px;
+    line-height: 1.7;
   }
 }
 
 @media (max-width: 480px) {
   .about-text-column p {
     font-size: 0.9rem;
-    line-height: 1.6;
+    line-height: 1.65;
+    margin-bottom: 15px;
   }
 }
 
@@ -982,6 +1044,25 @@ a {
   object-fit: cover;
   border-radius: var(--border-radius-md);
   position: relative;
+}
+
+@media (max-width: 1024px) {
+  .main-about-img {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-about-img {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-about-img {
+    height: 250px;
+  }
+}
   z-index: 2;
   box-shadow: var(--box-shadow-premium);
 }
@@ -1091,6 +1172,8 @@ a {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(0, 0, 0, 0.03);
   transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card:hover {
@@ -1103,6 +1186,12 @@ a {
   height: 240px;
   overflow: hidden;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .service-img-holder {
+    height: 220px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1125,11 +1214,19 @@ a {
 .service-details {
   padding: 30px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .service-details {
+    padding: 25px;
+  }
 }
 
 @media (max-width: 480px) {
   .service-details {
-    padding: 20px;
+    padding: 22px;
   }
 }
 
@@ -1149,28 +1246,65 @@ a {
   font-family: var(--font-secondary);
   border: 4px solid var(--color-light-surface);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .service-num {
+    width: 48px;
+    height: 48px;
+    font-size: 1.1rem;
+    border-width: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-num {
+    width: 46px;
+    height: 46px;
+    font-size: 1rem;
+    top: -20px;
+    right: 20px;
+    border-width: 3px;
+  }
 }
 
 .service-details h3 {
   font-size: 1.35rem;
   margin-bottom: 12px;
   color: #121214;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .service-details h3 {
+    font-size: 1.25rem;
+  }
 }
 
 @media (max-width: 480px) {
   .service-details h3 {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+    margin-bottom: 15px;
   }
 }
 
 .service-details p {
   color: var(--color-text-muted-dark);
   font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .service-details p {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 480px) {
   .service-details p {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    line-height: 1.7;
   }
 }
 
@@ -1222,15 +1356,21 @@ a {
   border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
 }
 
+@media (max-width: 1024px) {
+  .gallery-img-wrapper {
+    height: 250px;
+  }
+}
+
 @media (max-width: 768px) {
   .gallery-img-wrapper {
-    height: 240px;
+    height: 220px;
   }
 }
 
 @media (max-width: 480px) {
   .gallery-img-wrapper {
-    height: 200px;
+    height: 180px;
   }
 }
 
@@ -1268,6 +1408,12 @@ a {
   display: flex;
   align-items: flex-start;
   gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .contact-item {
+    gap: 18px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1331,6 +1477,12 @@ a {
   border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
+@media (max-width: 1024px) {
+  .contact-form-panel {
+    padding: 40px;
+  }
+}
+
 @media (max-width: 768px) {
   .contact-form-panel {
     padding: 35px;
@@ -1340,6 +1492,7 @@ a {
 @media (max-width: 480px) {
   .contact-form-panel {
     padding: 25px;
+    border-radius: var(--border-radius-md);
   }
 }
 
@@ -1372,6 +1525,12 @@ a {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+@media (max-width: 480px) {
+  .quote-form {
+    gap: 18px;
+  }
 }
 
 .form-group {
@@ -1420,6 +1579,16 @@ a {
   color: var(--color-text-dark);
   transition: var(--transition-fast);
   min-height: 44px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 14px;
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1427,7 +1596,9 @@ a {
   .form-group select,
   .form-group textarea {
     font-size: 16px;
-    padding: 12px;
+    padding: 14px;
+    min-height: 48px;
+    border-radius: 6px;
   }
 }
 
@@ -1626,12 +1797,22 @@ a {
   transition: var(--transition-smooth);
   border: none;
   cursor: pointer;
+  min-width: 60px;
+  min-height: 60px;
+}
+
+@media (max-width: 1024px) {
+  .whatsapp-float-btn {
+    width: 58px;
+    height: 58px;
+    font-size: 1.7rem;
+  }
 }
 
 @media (max-width: 768px) {
   .whatsapp-float-btn {
-    width: 55px;
-    height: 55px;
+    width: 56px;
+    height: 56px;
     font-size: 1.6rem;
     bottom: 25px;
     right: 25px;
@@ -1640,11 +1821,11 @@ a {
 
 @media (max-width: 480px) {
   .whatsapp-float-btn {
-    width: 50px;
-    height: 50px;
-    font-size: 1.4rem;
-    bottom: 20px;
-    right: 20px;
+    width: 54px;
+    height: 54px;
+    font-size: 1.5rem;
+    bottom: 22px;
+    right: 22px;
   }
 }
 
@@ -1698,21 +1879,33 @@ a {
   transform: translateY(20px);
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   box-shadow: 0 4px 15px rgba(212, 167, 55, 0.3);
+  min-width: 50px;
+  min-height: 50px;
+}
+
+@media (max-width: 1024px) {
+  .back-to-top {
+    bottom: 95px;
+    right: 28px;
+    width: 48px;
+    height: 48px;
+  }
 }
 
 @media (max-width: 768px) {
   .back-to-top {
-    bottom: 75px;
+    bottom: 85px;
     right: 25px;
-    width: 45px;
-    height: 45px;
+    width: 46px;
+    height: 46px;
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 480px) {
   .back-to-top {
-    bottom: 80px;
-    right: 20px;
+    bottom: 85px;
+    right: 22px;
     width: 44px;
     height: 44px;
     font-size: 1.1rem;
