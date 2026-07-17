@@ -96,8 +96,10 @@ document.addEventListener('DOMContentLoaded', () => {
   let activeFilter = 'all';
 
   filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Remove active class from buttons
+    // Use both click and touchend for mobile reliability
+    const applyFilter = (e) => {
+      e.preventDefault();
+      // Remove active class from all buttons
       filterButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
@@ -105,17 +107,15 @@ document.addEventListener('DOMContentLoaded', () => {
       activeFilter = filterValue;
 
       galleryItems.forEach(item => {
-        if (filterValue === 'all') {
+        if (filterValue === 'all' || item.classList.contains(filterValue)) {
           item.classList.remove('hidden');
         } else {
-          if (item.classList.contains(filterValue)) {
-            item.classList.remove('hidden');
-          } else {
-            item.classList.add('hidden');
-          }
+          item.classList.add('hidden');
         }
       });
-    });
+    };
+
+    btn.addEventListener('click', applyFilter);
   });
 
 
@@ -307,9 +307,17 @@ document.addEventListener('DOMContentLoaded', () => {
         aosObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  }, { threshold: 0, rootMargin: '0px 0px 0px 0px' });
 
   aosElements.forEach(el => aosObserver.observe(el));
+
+  // Also immediately animate anything already in view
+  aosElements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      el.classList.add('aos-animate');
+    }
+  });
 
   // ==========================================
   // 9. SCROLL PROGRESS BAR
