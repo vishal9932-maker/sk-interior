@@ -559,7 +559,20 @@ a {
 
 @media (max-width: 480px) {
   .logo-text {
-    display: none;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-main {
+    font-size: 0.88rem;
+    letter-spacing: 0.3px;
+  }
+
+  .logo-sub {
+    font-size: 0.58rem;
+    letter-spacing: 1.5px;
   }
 }
 
